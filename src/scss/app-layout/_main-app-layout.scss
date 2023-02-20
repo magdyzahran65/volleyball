@@ -1,0 +1,17 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-app-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  // grid-template-rows: 40px calc(100vh - 65px) 24px;
+  grid-template-rows: 40px 100% 24px;
+}
+@media screen and (max-width: 410px) {
+  .main-app-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    // grid-template-rows: 40px calc(100vh - 65px) 24px;
+    grid-template-rows: 40px 100% 24px;
+  }
+}

@@ -1,0 +1,14 @@
+// global
+@import "./global/reset";
+@import "./global/variables";
+
+// app view
+@import "./app-layout//main-app-layout";
+@import "./app-layout/app-main-header";
+@import "./app-layout/app-main-footer";
+
+// tables
+@import "./tables/first-date-table";
+@import "./tables/second-table-before-match";
+//  pages
+@import "./printed-page/printed-page";

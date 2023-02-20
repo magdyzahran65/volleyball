@@ -1,0 +1,11 @@
+:root {
+  // this is color variables section
+  //   =================================
+  --mainTextColor: #0481e8;
+
+  //   =========================================================================
+  //   this is sizing variables section
+  //   ===================================
+  --app-layout-columns: calc(100& - var(--app-header-height) + 1fr + 50px);
+  --app-header-height: 80px;
+}

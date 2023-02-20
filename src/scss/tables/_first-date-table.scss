@@ -1,0 +1,29 @@
+.first-table-date {
+  direction: rtl;
+  margin: 3px auto;
+  border: 2px solid gray;
+  & th {
+    border: 2px solid gray;
+    width: 200px;
+    height: 2%;
+    text-align: start;
+    max-height: 2%;
+    padding: 0% 3%;
+    & span {
+      margin: 0px 6%;
+      display: block;
+    }
+  }
+  & .teams-in-date-t {
+    width: 25%;
+    border-left: none;
+  }
+}
+.vs {
+  border-right: none !important;
+}
+.date-table-form {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 80%;
+}

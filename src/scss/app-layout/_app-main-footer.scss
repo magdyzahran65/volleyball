@@ -1,0 +1,26 @@
+.footer-container {
+  background: #5ebf7b;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(255, 255, 255, 1) 10%,
+  //   rgba(185, 209, 31, 0.785) 68%
+  // );
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  // color: rgb(95, 95, 95);
+  color: rgb(255, 255, 255);
+  p {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    span {
+      color: whitesmoke;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
