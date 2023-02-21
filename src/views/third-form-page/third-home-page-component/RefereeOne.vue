@@ -66,9 +66,7 @@ export default {
       sessionStorage.setItem("refereesInputs", JSON.stringify(this.inputText));
     }
   },
-  mounted() {
-   
-  },
+  mounted() {},
   data() {
     return {
       inputText: ["", "", "", ""],
