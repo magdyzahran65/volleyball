@@ -67,7 +67,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.inputText);
+   
   },
   data() {
     return {
