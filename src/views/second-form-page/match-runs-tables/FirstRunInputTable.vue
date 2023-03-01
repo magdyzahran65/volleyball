@@ -1,7 +1,7 @@
 <template>
   <div class="first-run-table">
     <div class="m-2 text-bg-warning text-info-emphasis warning-msg">
-      ضغطة مطولة لإضافة دائرة في نموزج الطباعة
+      يمكنك وضع دائرة في صفحة عرض الملف بالضغط علي الرقم
     </div>
     <h6
       class="text-decoration-underline text-white mt-2 text-bg-secondary p-2 rounded-3"
