@@ -36,20 +36,48 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(row, index) in table1" :key="'row-' + index">
-            <td>{{ row.col1 }}</td>
-            <td>{{ row.col2 }}</td>
-            <td>{{ row.col3 }}</td>
-            <td>{{ row.col4 }}</td>
-            <td>{{ row.col5 }}</td>
-            <td>{{ row.col6 }}</td>
+          <tr
+            class="table1"
+            v-for="(row, index) in table1"
+            :key="'row-' + index"
+          >
+            <td>
+              <span class="span">{{ row.col1 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col2 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col3 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col4 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col5 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col6 }}</span>
+            </td>
             <td>-</td>
-            <td>{{ table2[index].col1 }}</td>
-            <td>{{ table2[index].col2 }}</td>
-            <td>{{ table2[index].col3 }}</td>
-            <td>{{ table2[index].col4 }}</td>
-            <td>{{ table2[index].col5 }}</td>
-            <td>{{ table2[index].col6 }}</td>
+            <td>
+              <span class="span">{{ table2[index].col1 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ table2[index].col2 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ table2[index].col3 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ table2[index].col4 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ table2[index].col5 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ table2[index].col6 }}</span>
+            </td>
           </tr>
           <tr>
             <td colspan="2" class="bg-secondary text-white">T1 :</td>
@@ -103,19 +131,43 @@
         </thead>
         <tbody>
           <tr v-for="(row, index) in run2table1" :key="'row-' + index">
-            <td>{{ row.col1 }}</td>
-            <td>{{ row.col2 }}</td>
-            <td>{{ row.col3 }}</td>
-            <td>{{ row.col4 }}</td>
-            <td>{{ row.col5 }}</td>
-            <td>{{ row.col6 }}</td>
+            <td>
+              <span class="span">{{ row.col1 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col2 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col3 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col4 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col5 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ row.col6 }}</span>
+            </td>
             <td>-</td>
-            <td>{{ run2table2[index].col1 }}</td>
-            <td>{{ run2table2[index].col2 }}</td>
-            <td>{{ run2table2[index].col3 }}</td>
-            <td>{{ run2table2[index].col4 }}</td>
-            <td>{{ run2table2[index].col5 }}</td>
-            <td>{{ run2table2[index].col6 }}</td>
+            <td>
+              <span class="span">{{ run2table2[index].col1 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ run2table2[index].col2 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ run2table2[index].col3 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ run2table2[index].col4 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ run2table2[index].col5 }}</span>
+            </td>
+            <td>
+              <span class="span">{{ run2table2[index].col6 }}</span>
+            </td>
           </tr>
           <tr>
             <td colspan="2" class="bg-secondary text-white">T1 :</td>
@@ -134,37 +186,6 @@
       </table>
 
       <!-- ==== -->
-
-      <!-- <table class="table table-bordered">
-          <tr>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-            <th>4</th>
-            <th>5</th>
-            <th>6</th>
-          </tr>
-          <tbody>
-            <tr v-for="(row, index) in table2" :key="'row-' + index"></tr>
-
-            <tr>
-              <td>{{ t1T2[0].num1 }}</td>
-              <td>{{ t1T2[0].num2 }}</td>
-              <td>{{ t1T2[1].num1 }}</td>
-              <td>{{ t1T2[1].num2 }}</td>
-              <td>{{ t1T2[2].num1 }}</td>
-              <td>{{ t1T2[2].num2 }}</td>
-            </tr>
-            <tr>
-              <td>{{ t1T2Table2[0].num1 }}</td>
-              <td>{{ t1T2Table2[0].num2 }}</td>
-              <td>{{ t1T2Table2[1].num1 }}</td>
-              <td>{{ t1T2Table2[1].num2 }}</td>
-              <td>{{ t1T2Table2[2].num1 }}</td>
-              <td>{{ t1T2Table2[2].num2 }}</td>
-            </tr>
-          </tbody>
-        </table> -->
     </div>
   </div>
 </template>
@@ -172,6 +193,15 @@
 <script>
 export default {
   name: "FirstRunPrinting",
+  mounted() {
+    let tds = document.querySelectorAll(".span");
+
+    tds.forEach((td) => {
+      td.addEventListener("click", () => {
+        td.classList.toggle("ring");
+      });
+    });
+  },
   created() {
     // الشوط 1
     this.table1 = JSON.parse(sessionStorage.getItem("runTableOne"));
@@ -189,6 +219,7 @@ export default {
   },
   data() {
     return {
+      elementRounded: [],
       table1: [],
       table2: [],
       t1T2: [],
@@ -206,6 +237,12 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.ring {
+  color: black;
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
 .term-container {
   justify-content: center;
   display: grid;
