@@ -37,19 +37,43 @@
         </thead>
         <tbody>
           <tr v-for="(row, index) in table1" :key="'row-' + index">
-            <td>{{ row.col1 }}</td>
-            <td>{{ row.col2 }}</td>
-            <td>{{ row.col3 }}</td>
-            <td>{{ row.col4 }}</td>
-            <td>{{ row.col5 }}</td>
-            <td>{{ row.col6 }}</td>
+            <td>
+              <span class="span5">{{ row.col1 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ row.col2 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ row.col3 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ row.col4 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ row.col5 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ row.col6 }}</span>
+            </td>
             <td>-</td>
-            <td>{{ table2[index].col1 }}</td>
-            <td>{{ table2[index].col2 }}</td>
-            <td>{{ table2[index].col3 }}</td>
-            <td>{{ table2[index].col4 }}</td>
-            <td>{{ table2[index].col5 }}</td>
-            <td>{{ table2[index].col6 }}</td>
+            <td>
+              <span class="span5">{{ table2[index].col1 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ table2[index].col2 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ table2[index].col3 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ table2[index].col4 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ table2[index].col5 }}</span>
+            </td>
+            <td>
+              <span class="span5">{{ table2[index].col6 }}</span>
+            </td>
           </tr>
           <tr>
             <td colspan="2" class="bg-secondary text-white">T1 :</td>
@@ -141,6 +165,15 @@ export default {
     this.t1T2Table2 = JSON.parse(sessionStorage.getItem("t1T2Run5Table2"));
     // console.log(this.DateTimeTable.team1);
   },
+  mounted() {
+    let tds5 = document.querySelectorAll(".span5");
+
+    tds5.forEach((td3) => {
+      td3.addEventListener("click", () => {
+        td3.classList.toggle("ring5");
+      });
+    });
+  },
   data() {
     return {
       table1: [],
@@ -157,6 +190,12 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.ring5 {
+  color: black;
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
 .term-container {
   justify-content: center;
   display: grid;
